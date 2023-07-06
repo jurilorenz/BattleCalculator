@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         }
     }
     
-    private var calclator = CalculatorLogic()
+    private var calculator = CalculatorLogic()
     
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         
@@ -33,16 +33,16 @@ class ViewController: UIViewController {
         
         isFinishedTypingNumber = true
         
-        calclator.setNumber(displayValue)
+        calculator.setNumber(displayValue)
         
         if let calcMethod = sender.currentTitle {
-            
-            if let result = calclator.calculate(symbol: calcMethod) {
+ 
+            if let result = calculator.calculate(symbol: calcMethod) {
                 displayValue = result
             }
         }
-        
     }
+
     
 
     @IBAction func numButtonPressed(_ sender: UIButton) {
@@ -68,6 +68,8 @@ class ViewController: UIViewController {
             }
         }
     }
+
 }
+
 
 
