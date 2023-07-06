@@ -13,6 +13,7 @@
 		2D36A0642A55B1AE00B419A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D36A0622A55B1AE00B419A2 /* Main.storyboard */; };
 		2D36A0662A55B1B000B419A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D36A0652A55B1B000B419A2 /* Assets.xcassets */; };
 		2D36A0692A55B1B000B419A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D36A0672A55B1B000B419A2 /* LaunchScreen.storyboard */; };
+		2D5CD8032A56CA200028C1E2 /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5CD8022A56CA200028C1E2 /* CalculatorLogic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		2D36A0652A55B1B000B419A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D36A0682A55B1B000B419A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D36A06A2A55B1B000B419A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D5CD8022A56CA200028C1E2 /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		2D36A05B2A55B1AE00B419A2 /* MagicCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				2D5CD7FF2A56C9880028C1E2 /* Model */,
+				2D5CD8012A56C9AE0028C1E2 /* View */,
+				2D5CD8002A56C99B0028C1E2 /* Controller */,
 				2D36A05C2A55B1AE00B419A2 /* AppDelegate.swift */,
 				2D36A05E2A55B1AE00B419A2 /* SceneDelegate.swift */,
-				2D36A0602A55B1AE00B419A2 /* ViewController.swift */,
-				2D36A0622A55B1AE00B419A2 /* Main.storyboard */,
 				2D36A0652A55B1B000B419A2 /* Assets.xcassets */,
 				2D36A0672A55B1B000B419A2 /* LaunchScreen.storyboard */,
 				2D36A06A2A55B1B000B419A2 /* Info.plist */,
 			);
 			path = MagicCalculator;
+			sourceTree = "<group>";
+		};
+		2D5CD7FF2A56C9880028C1E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2D5CD8022A56CA200028C1E2 /* CalculatorLogic.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2D5CD8002A56C99B0028C1E2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2D36A0602A55B1AE00B419A2 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		2D5CD8012A56C9AE0028C1E2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2D36A0622A55B1AE00B419A2 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D5CD8032A56CA200028C1E2 /* CalculatorLogic.swift in Sources */,
 				2D36A0612A55B1AE00B419A2 /* ViewController.swift in Sources */,
 				2D36A05D2A55B1AE00B419A2 /* AppDelegate.swift in Sources */,
 				2D36A05F2A55B1AE00B419A2 /* SceneDelegate.swift in Sources */,
@@ -295,6 +323,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -323,6 +352,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
