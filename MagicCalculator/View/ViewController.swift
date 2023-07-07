@@ -22,6 +22,15 @@ class ViewController: UIViewController {
         }
         set {
             displayLabel.text = String(newValue)
+            
+            //Reduces the sender's (the button that got pressed) opacity to half.
+            displayLabel.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+            
+            //Code should execute after 0.2 second delay.
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                //Bring's sender's opacity back up to fully opaque.
+                self.displayLabel.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, alpha: 1)
+            }
         }
     }
     
@@ -30,6 +39,15 @@ class ViewController: UIViewController {
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         
         //What should happen when a non-number button is pressed
+        
+        //Reduces the sender's (the button that got pressed) opacity to half.
+        sender.alpha = 0.7
+        
+        //Code should execute after 0.2 second delay.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            //Bring's sender's opacity back up to fully opaque.
+            sender.alpha = 1
+        }
         
         isFinishedTypingNumber = true
         
@@ -48,6 +66,16 @@ class ViewController: UIViewController {
     @IBAction func numButtonPressed(_ sender: UIButton) {
         
         //What should happen when a number is entered into the keypad
+        
+        //Reduces the sender's (the button that got pressed) opacity to half.
+        sender.alpha = 0.7
+        
+        
+        //Code should execute after 0.2 second delay.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            //Bring's sender's opacity back up to fully opaque.
+            sender.alpha = 1
+        }
         
         if let numValue = sender.currentTitle {
             
