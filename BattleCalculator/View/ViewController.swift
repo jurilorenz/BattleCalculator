@@ -9,6 +9,27 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
+
+    @IBOutlet weak var displayLabel: UILabel!
+    
+    private var isFinishedTypingNumber: Bool = true
+    
+    private var player: AVAudioPlayer!
+    
+    private var displayValue: Double {
+        get {
+            guard let number = Double(displayLabel.text!) else {
+                fatalError("Cannot convert display label text to a Double.")
+            }
+            return number
+        }
+        set {
+            displayLabel.text = String(newValue)
+            updateDisplayLabelColor()
+        }
+    }
+    
+    private var calculator = CalculatorLogic()
     
     let audioFileNames: [String: String] = [
         "0": "0",
@@ -31,35 +52,7 @@ class ViewController: UIViewController {
         ".": "point",
         "-": "subtraction"
     ]
-
-    @IBOutlet weak var displayLabel: UILabel!
     
-    var player: AVAudioPlayer!
-    
-    private var isFinishedTypingNumber: Bool = true
-    
-    private var displayValue: Double {
-        get {
-            guard let number = Double(displayLabel.text!) else {
-                fatalError("Cannot convert display label text to a Double.")
-            }
-            return number
-        }
-        set {
-            displayLabel.text = String(newValue)
-            
-            //Reduces the sender's (the button that got pressed) opacity to half.
-            displayLabel.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)
-            
-            //Code should execute after 0.2 second delay.
-            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                //Bring's sender's opacity back up to fully opaque.
-                self.displayLabel.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, alpha: 1)
-            }
-        }
-    }
-    
-    private var calculator = CalculatorLogic()
     
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         
@@ -134,6 +127,17 @@ class ViewController: UIViewController {
             player.play()
         } catch {
             print("Failed to play sound: \(error)")
+        }
+    }
+    
+    private func updateDisplayLabelColor() {
+        //Change the display label color to red.
+        displayLabel.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)
+        
+        //Code should execute after 0.2 second delay.
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            //Bring's display's color back to black.
+            self.displayLabel.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, alpha: 1)
         }
     }
 }
