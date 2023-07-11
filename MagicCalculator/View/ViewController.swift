@@ -6,10 +6,35 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    let audioFileNames: [String: String] = [
+        "0": "0",
+        "1": "1",
+        "2": "2",
+        "3": "3",
+        "4": "4",
+        "5": "5",
+        "6": "6",
+        "7": "7",
+        "8": "8",
+        "9": "9",
+        "AC": "AC",
+        "+": "addition",
+        "÷": "division",
+        "=": "equal",
+        "×": "multiplication",
+        "%": "percent",
+        "+/-": "plus-minus",
+        ".": "point",
+        "-": "subtraction"
+    ]
 
     @IBOutlet weak var displayLabel: UILabel!
+    
+    var player: AVAudioPlayer!
     
     private var isFinishedTypingNumber: Bool = true
     
@@ -24,7 +49,7 @@ class ViewController: UIViewController {
             displayLabel.text = String(newValue)
             
             //Reduces the sender's (the button that got pressed) opacity to half.
-            displayLabel.backgroundColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
+            displayLabel.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)
             
             //Code should execute after 0.2 second delay.
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -39,9 +64,10 @@ class ViewController: UIViewController {
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         
         //What should happen when a non-number button is pressed
+        playSound(soundName: sender.currentTitle!)
         
         //Reduces the sender's (the button that got pressed) opacity to half.
-        sender.alpha = 0.7
+        sender.alpha = 0.9
         
         //Code should execute after 0.2 second delay.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
@@ -61,14 +87,13 @@ class ViewController: UIViewController {
         }
     }
 
-    
-
     @IBAction func numButtonPressed(_ sender: UIButton) {
         
         //What should happen when a number is entered into the keypad
+        playSound(soundName: sender.currentTitle!)
         
         //Reduces the sender's (the button that got pressed) opacity to half.
-        sender.alpha = 0.7
+        sender.alpha = 0.9
         
         
         //Code should execute after 0.2 second delay.
@@ -94,6 +119,21 @@ class ViewController: UIViewController {
                 }
                 displayLabel.text = displayLabel.text! + numValue
             }
+        }
+    }
+    
+    func playSound(soundName: String) {
+        guard let audioFileName = audioFileNames[soundName],
+              let url = Bundle.main.url(forResource: audioFileName, withExtension: "wav") else {
+            print("Sound file not found.")
+            return
+        }
+        
+        do {
+            player = try AVAudioPlayer(contentsOf: url)
+            player.play()
+        } catch {
+            print("Failed to play sound: \(error)")
         }
     }
 }

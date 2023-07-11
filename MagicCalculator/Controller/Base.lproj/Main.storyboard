@@ -26,7 +26,7 @@
                                                 <rect key="frame" x="10" y="0.0" width="373" height="141.33333333333334"/>
                                                 <color key="backgroundColor" red="0.098039215686274508" green="0.10196078431372549" blue="0.098039215686274508" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <fontDescription key="fontDescription" type="system" weight="thin" pointSize="50"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="textColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -79,7 +79,7 @@
                                                 <color key="backgroundColor" red="0.30588235289999999" green="0.62352941179999999" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="÷">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.098039215690000001" green="0.1019607843" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BdZ-NI-jMq"/>
@@ -96,7 +96,7 @@
                                                 <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="7">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PgP-L9-3U9"/>
@@ -107,7 +107,7 @@
                                                 <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="8">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9YB-mt-Ua6"/>
@@ -118,7 +118,7 @@
                                                 <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="9">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0N-eK-xIL"/>
@@ -129,7 +129,7 @@
                                                 <color key="backgroundColor" red="0.30588235289999999" green="0.62352941179999999" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="×">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.098039215690000001" green="0.1019607843" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x0Z-oR-aFi"/>
@@ -145,7 +145,7 @@
                                                 <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="4">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqo-4O-jdv"/>
@@ -156,7 +156,7 @@
                                                 <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="5">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BRh-Bs-DeG"/>
@@ -167,7 +167,7 @@
                                                 <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="6">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4sz-n3-JGn"/>
@@ -178,7 +178,7 @@
                                                 <color key="backgroundColor" red="0.30588235289999999" green="0.62352941179999999" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="-">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.098039215690000001" green="0.1019607843" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ha5-d0-F7v"/>
@@ -194,7 +194,7 @@
                                                 <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="1">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="guv-IO-QBQ"/>
@@ -205,7 +205,7 @@
                                                 <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="2">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tqO-8r-ZR4"/>
@@ -216,7 +216,7 @@
                                                 <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="3">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KWq-ti-8pP"/>
@@ -227,7 +227,7 @@
                                                 <color key="backgroundColor" red="0.30588235289999999" green="0.62352941179999999" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="+">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.098039215690000001" green="0.1019607843" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tPG-oS-tTg"/>
@@ -243,7 +243,7 @@
                                                 <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="0">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="titleColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M4w-pa-MTe"/>
@@ -257,7 +257,7 @@
                                                         <color key="backgroundColor" red="0.1176470588" green="0.31764705879999999" blue="0.15686274510000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                         <state key="normal" title=".">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" red="0.84705882349999995" green="0.91372549020000005" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="numButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ga-XR-3pO"/>
@@ -268,7 +268,7 @@
                                                         <color key="backgroundColor" red="0.30588235289999999" green="0.62352941179999999" blue="0.23921568630000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                                         <state key="normal" title="=">
-                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <color key="titleColor" red="0.098039215690000001" green="0.1019607843" blue="0.098039215690000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="calcButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6mj-Xx-UWV"/>
