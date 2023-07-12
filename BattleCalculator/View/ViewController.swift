@@ -9,8 +9,22 @@ import UIKit
 import AVFoundation
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var displayLabel: UILabel!
+    
+    @IBOutlet weak var displayLabelBackground: UIView!
+    
+    @IBOutlet weak var firstStack: UIStackView!
+    
+    @IBOutlet weak var secondStack: UIStackView!
+    
+    @IBOutlet weak var thirdSfack: UIStackView!
+    
+    @IBOutlet weak var fourthStack: UIStackView!
+    
+    @IBOutlet weak var fifthStack: UIStackView!
+    
+    
     
     private var isFinishedTypingNumber: Bool = true
     
@@ -74,13 +88,13 @@ class ViewController: UIViewController {
         calculator.setNumber(displayValue)
         
         if let calcMethod = sender.currentTitle {
- 
+            
             if let result = calculator.calculate(symbol: calcMethod) {
                 displayValue = result
             }
         }
     }
-
+    
     @IBAction func numButtonPressed(_ sender: UIButton) {
         
         //What should happen when a number is entered into the keypad
@@ -132,6 +146,24 @@ class ViewController: UIViewController {
     }
     
     private func updateDisplayLabelColor() {
+        let colorSequence: [(stack: UIStackView, color: UIColor)] = [
+            (firstStack, UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1)),
+            (secondStack, UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1)),
+            (thirdSfack, UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1)),
+            (fourthStack, UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1)),
+            (fifthStack, UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1))
+        ]
+        
+        animateBackgroundColorChange(for: displayLabelBackground, color: UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1))
+        
+        for (index, item) in colorSequence.enumerated() {
+            DispatchQueue.main.asyncAfter(deadline: .now() + Double(index + 1) * 0.05) {
+                self.animateBackgroundColorChange(for: item.stack, color: item.color)
+            }
+        }
+    }
+    
+    private func animateBackgroundColorChange(for view: UIView, color: UIColor) {
         //Change the display label color to red.
         displayLabel.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)
         
@@ -139,15 +171,64 @@ class ViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             //Bring's display's color back to black.
             self.displayLabel.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, alpha: 1)
+            UIView.animate(withDuration: 0.2, animations: {
+                view.backgroundColor = color
+            }) { _ in
+                UIView.animate(withDuration: 0.05) {
+                    view.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, alpha: 1)
+                }
+            }
         }
+        
+        
+        //   private func updateDisplayLabelColor() {
+        //       //Change the display label color to red.
+        //       displayLabel.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)
+        //
+        //       //Code should execute after 0.2 second delay.
+        //       DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+        //           //Bring's display's color back to black.
+        //           self.displayLabel.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, //alpha: 1)
+        //           self.displayLabelBackground.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: //56 / 255.0, alpha: 1)
+        //           self.firstStack.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, //alpha: 1)
+        //           DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+        //               self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, //blue: 25 / 255.0, alpha: 1)
+        //               self.firstStack.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / //255.0, alpha: 1)
+        //               self.secondStack.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / //255.0, alpha: 1)
+        //               DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+        //                   self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, //blue: 25 / 255.0, alpha: 1)
+        //                   self.secondStack.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 /// 255.0, alpha: 1)
+        //                   self.thirdSfack.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / //255.0, alpha: 1)
+        //                   DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+        //                       self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / //255.0, blue: 25 / 255.0, alpha: 1)
+        //                       self.thirdSfack.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: //168 / 255.0, alpha: 1)
+        //                       self.fourthStack.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: //56 / 255.0, alpha: 1)
+        //                       DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+        //                           self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / //255.0, blue: 25 / 255.0, alpha: 1)
+        //                           self.fourthStack.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / 255.0, //blue: 168 / 255.0, alpha: 1)
+        //                           self.fifthStack.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, //blue: 56 / 255.0, alpha: 1)
+        //                           DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
+        //                               self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: //26 / 255.0, blue: 25 / 255.0, alpha: 1)
+        //                               self.fifthStack.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / //255.0, blue: 168 / 255.0, alpha: 1)
+        //                           }
+        //                       }
+        //                   }
+        //               }
+        //           }
+        //
+        //
+        //
+        //
+        //       }
+        //   }
+        
+
     }
-    
     private func formatDisplayValue(_ value: Double) -> String {
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = value.truncatingRemainder(dividingBy: 1) == 0 ? 0 : 4
         return formatter.string(from: NSNumber(value: value)) ?? ""
     }
 }
-
 
 
