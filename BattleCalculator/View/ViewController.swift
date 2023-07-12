@@ -24,7 +24,8 @@ class ViewController: UIViewController {
             return number
         }
         set {
-            displayLabel.text = String(newValue)
+            let formattedValue = formatDisplayValue(newValue)
+            displayLabel.text = formattedValue
             updateDisplayLabelColor()
         }
     }
@@ -139,6 +140,12 @@ class ViewController: UIViewController {
             //Bring's display's color back to black.
             self.displayLabel.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, alpha: 1)
         }
+    }
+    
+    private func formatDisplayValue(_ value: Double) -> String {
+        let formatter = NumberFormatter()
+        formatter.maximumFractionDigits = value.truncatingRemainder(dividingBy: 1) == 0 ? 0 : 4
+        return formatter.string(from: NSNumber(value: value)) ?? ""
     }
 }
 
