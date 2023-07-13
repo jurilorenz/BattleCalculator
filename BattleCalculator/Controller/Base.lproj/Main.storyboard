@@ -293,7 +293,7 @@
                     </view>
                     <connections>
                         <outlet property="displayLabel" destination="RbC-s3-rML" id="Z7E-6g-2a0"/>
-                        <outlet property="displayLabelBackground" destination="ZSZ-Uu-6Ke" id="a7Y-9O-MJ0"/>
+                        <outlet property="displayLabelBackground" destination="ZSZ-Uu-6Ke" id="DIc-Hf-bgZ"/>
                         <outlet property="fifthStack" destination="ALK-tI-Obv" id="0Ux-xr-ygZ"/>
                         <outlet property="firstStack" destination="cWx-uD-lzh" id="NHj-Bc-cwY"/>
                         <outlet property="fourthStack" destination="3tb-SD-Zaa" id="RZS-qa-qqB"/>

@@ -147,14 +147,12 @@ class ViewController: UIViewController {
     
     private func updateDisplayLabelColor() {
         let colorSequence: [(stack: UIStackView, color: UIColor)] = [
-            (firstStack, UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1)),
-            (secondStack, UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1)),
-            (thirdSfack, UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1)),
-            (fourthStack, UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1)),
-            (fifthStack, UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1))
+            (firstStack, UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)),
+            (secondStack, UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)),
+            (thirdSfack, UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)),
+            (fourthStack, UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)),
+            (fifthStack, UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1))
         ]
-        
-        animateBackgroundColorChange(for: displayLabelBackground, color: UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1))
         
         for (index, item) in colorSequence.enumerated() {
             DispatchQueue.main.asyncAfter(deadline: .now() + Double(index + 1) * 0.05) {
@@ -166,64 +164,25 @@ class ViewController: UIViewController {
     private func animateBackgroundColorChange(for view: UIView, color: UIColor) {
         //Change the display label color to red.
         displayLabel.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)
-        
+
         //Code should execute after 0.2 second delay.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             //Bring's display's color back to black.
             self.displayLabel.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, alpha: 1)
+            self.displayLabelBackground.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+                self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, alpha: 1)
+            }
             UIView.animate(withDuration: 0.2, animations: {
                 view.backgroundColor = color
             }) { _ in
                 UIView.animate(withDuration: 0.05) {
-                    view.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, alpha: 1)
+                    view.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1)
                 }
             }
         }
-        
-        
-        //   private func updateDisplayLabelColor() {
-        //       //Change the display label color to red.
-        //       displayLabel.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)
-        //
-        //       //Code should execute after 0.2 second delay.
-        //       DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-        //           //Bring's display's color back to black.
-        //           self.displayLabel.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, //alpha: 1)
-        //           self.displayLabelBackground.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: //56 / 255.0, alpha: 1)
-        //           self.firstStack.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, //alpha: 1)
-        //           DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-        //               self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, //blue: 25 / 255.0, alpha: 1)
-        //               self.firstStack.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / //255.0, alpha: 1)
-        //               self.secondStack.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / //255.0, alpha: 1)
-        //               DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-        //                   self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, //blue: 25 / 255.0, alpha: 1)
-        //                   self.secondStack.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 /// 255.0, alpha: 1)
-        //                   self.thirdSfack.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / //255.0, alpha: 1)
-        //                   DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-        //                       self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / //255.0, blue: 25 / 255.0, alpha: 1)
-        //                       self.thirdSfack.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: //168 / 255.0, alpha: 1)
-        //                       self.fourthStack.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: //56 / 255.0, alpha: 1)
-        //                       DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-        //                           self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / //255.0, blue: 25 / 255.0, alpha: 1)
-        //                           self.fourthStack.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / 255.0, //blue: 168 / 255.0, alpha: 1)
-        //                           self.fifthStack.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, //blue: 56 / 255.0, alpha: 1)
-        //                           DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
-        //                               self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: //26 / 255.0, blue: 25 / 255.0, alpha: 1)
-        //                               self.fifthStack.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / //255.0, blue: 168 / 255.0, alpha: 1)
-        //                           }
-        //                       }
-        //                   }
-        //               }
-        //           }
-        //
-        //
-        //
-        //
-        //       }
-        //   }
-        
-
     }
+    
     private func formatDisplayValue(_ value: Double) -> String {
         let formatter = NumberFormatter()
         formatter.maximumFractionDigits = value.truncatingRemainder(dividingBy: 1) == 0 ? 0 : 4
