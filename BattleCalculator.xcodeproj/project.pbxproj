@@ -14,6 +14,8 @@
 		2D36A0662A55B1B000B419A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D36A0652A55B1B000B419A2 /* Assets.xcassets */; };
 		2D36A0692A55B1B000B419A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D36A0672A55B1B000B419A2 /* LaunchScreen.storyboard */; };
 		2D5CD8032A56CA200028C1E2 /* CalculatorLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5CD8022A56CA200028C1E2 /* CalculatorLogic.swift */; };
+		2DCDB64E2A5FF04C002D5B66 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCDB64D2A5FF04C002D5B66 /* Constants.swift */; };
+		2DCDB6502A5FF63A002D5B66 /* AudioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCDB64F2A5FF63A002D5B66 /* AudioData.swift */; };
 		2DDDF6C92A5D87F00057447E /* AC.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDF6B62A5D87ED0057447E /* AC.wav */; };
 		2DDDF6CA2A5D87F00057447E /* percent.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDF6B72A5D87ED0057447E /* percent.wav */; };
 		2DDDF6CB2A5D87F00057447E /* point.wav in Resources */ = {isa = PBXBuildFile; fileRef = 2DDDF6B82A5D87ED0057447E /* point.wav */; };
@@ -45,6 +47,8 @@
 		2D36A0682A55B1B000B419A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D36A06A2A55B1B000B419A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D5CD8022A56CA200028C1E2 /* CalculatorLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorLogic.swift; sourceTree = "<group>"; };
+		2DCDB64D2A5FF04C002D5B66 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2DCDB64F2A5FF63A002D5B66 /* AudioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioData.swift; sourceTree = "<group>"; };
 		2DDDF6B62A5D87ED0057447E /* AC.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = AC.wav; path = BattleCalculator/Sounds/AC.wav; sourceTree = SOURCE_ROOT; };
 		2DDDF6B72A5D87ED0057447E /* percent.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = percent.wav; path = BattleCalculator/Sounds/percent.wav; sourceTree = SOURCE_ROOT; };
 		2DDDF6B82A5D87ED0057447E /* point.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = point.wav; path = BattleCalculator/Sounds/point.wav; sourceTree = SOURCE_ROOT; };
@@ -96,6 +100,7 @@
 		2D36A05B2A55B1AE00B419A2 /* BattleCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				2DCDB64C2A5FF025002D5B66 /* Supporting Files */,
 				2D5CD7FF2A56C9880028C1E2 /* Model */,
 				2D5CD8012A56C9AE0028C1E2 /* View */,
 				2D5CD8002A56C99B0028C1E2 /* Controller */,
@@ -131,6 +136,15 @@
 				2D36A0602A55B1AE00B419A2 /* ViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		2DCDB64C2A5FF025002D5B66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2DCDB64D2A5FF04C002D5B66 /* Constants.swift */,
+				2DCDB64F2A5FF63A002D5B66 /* AudioData.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		2DD0DF7A2A5C51E400673709 /* Sounds */ = {
@@ -250,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DCDB6502A5FF63A002D5B66 /* AudioData.swift in Sources */,
+				2DCDB64E2A5FF04C002D5B66 /* Constants.swift in Sources */,
 				2D5CD8032A56CA200028C1E2 /* CalculatorLogic.swift in Sources */,
 				2D36A0612A55B1AE00B419A2 /* ViewController.swift in Sources */,
 				2D36A05D2A55B1AE00B419A2 /* AppDelegate.swift in Sources */,

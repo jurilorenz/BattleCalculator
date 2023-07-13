@@ -46,29 +46,6 @@ class ViewController: UIViewController {
     
     private var calculator = CalculatorLogic()
     
-    let audioFileNames: [String: String] = [
-        "0": "0",
-        "1": "1",
-        "2": "2",
-        "3": "3",
-        "4": "4",
-        "5": "5",
-        "6": "6",
-        "7": "7",
-        "8": "8",
-        "9": "9",
-        "AC": "AC",
-        "+": "addition",
-        "÷": "division",
-        "=": "equal",
-        "×": "multiplication",
-        "%": "percent",
-        "+/-": "plus-minus",
-        ".": "point",
-        "-": "subtraction"
-    ]
-    
-    
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         
         //What should happen when a non-number button is pressed
@@ -131,7 +108,7 @@ class ViewController: UIViewController {
     }
     
     func playSound(soundName: String) {
-        guard let audioFileName = audioFileNames[soundName],
+        guard let audioFileName = AudioData.audioFileNames[soundName],
               let url = Bundle.main.url(forResource: audioFileName, withExtension: "wav") else {
             print("Sound file not found.")
             return
@@ -147,11 +124,11 @@ class ViewController: UIViewController {
     
     private func updateDisplayLabelColor() {
         let colorSequence: [(stack: UIStackView, color: UIColor)] = [
-            (firstStack, UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)),
-            (secondStack, UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)),
-            (thirdSfack, UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)),
-            (fourthStack, UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)),
-            (fifthStack, UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1))
+            (firstStack, Constants.secondaryColor),
+            (secondStack, Constants.secondaryColor),
+            (thirdSfack, Constants.secondaryColor),
+            (fourthStack, Constants.secondaryColor),
+            (fifthStack, Constants.secondaryColor),
         ]
         
         for (index, item) in colorSequence.enumerated() {
@@ -163,21 +140,21 @@ class ViewController: UIViewController {
     
     private func animateBackgroundColorChange(for view: UIView, color: UIColor) {
         //Change the display label color to red.
-        displayLabel.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)
+        displayLabel.backgroundColor = Constants.secondaryColor
 
         //Code should execute after 0.2 second delay.
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
             //Bring's display's color back to black.
-            self.displayLabel.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, alpha: 1)
-            self.displayLabelBackground.backgroundColor = UIColor(red: 223 / 255.0, green: 46 / 255.0, blue: 56 / 255.0, alpha: 1)
+            self.displayLabel.backgroundColor = Constants.primaryColor
+            self.displayLabelBackground.backgroundColor = Constants.secondaryColor
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
-                self.displayLabelBackground.backgroundColor = UIColor(red: 25 / 255.0, green: 26 / 255.0, blue: 25 / 255.0, alpha: 1)
+                self.displayLabelBackground.backgroundColor = Constants.primaryColor
             }
             UIView.animate(withDuration: 0.2, animations: {
                 view.backgroundColor = color
             }) { _ in
                 UIView.animate(withDuration: 0.05) {
-                    view.backgroundColor = UIColor(red: 216 / 255.0, green: 233 / 255.0, blue: 168 / 255.0, alpha: 1)
+                    view.backgroundColor = Constants.accentColor
                 }
             }
         }
