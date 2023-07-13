@@ -5,27 +5,24 @@
 //  Created by Juri Lorenz on 05.07.23.
 //
 
+// MARK: - Imports
 import UIKit
 import AVFoundation
 
+// MARK: - ViewController
 class ViewController: UIViewController {
-    
+   
+    // MARK: Outlets
     @IBOutlet weak var displayLabel: UILabel!
-    
     @IBOutlet weak var displayLabelBackground: UIView!
-    
     @IBOutlet weak var firstStack: UIStackView!
-    
     @IBOutlet weak var secondStack: UIStackView!
-    
     @IBOutlet weak var thirdSfack: UIStackView!
-    
     @IBOutlet weak var fourthStack: UIStackView!
-    
     @IBOutlet weak var fifthStack: UIStackView!
     
     
-    
+    // MARK: Properties
     private var isFinishedTypingNumber: Bool = true
     
     private var player: AVAudioPlayer!
@@ -46,6 +43,14 @@ class ViewController: UIViewController {
     
     private var calculator = CalculatorLogic()
     
+    
+    // MARK: View Lifecycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
+    
+    // MARK: Button Actions
     @IBAction func calcButtonPressed(_ sender: UIButton) {
         
         //What should happen when a non-number button is pressed
@@ -107,6 +112,8 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    // MARK: Helper Methods
     func playSound(soundName: String) {
         guard let audioFileName = AudioData.audioFileNames[soundName],
               let url = Bundle.main.url(forResource: audioFileName, withExtension: "wav") else {
