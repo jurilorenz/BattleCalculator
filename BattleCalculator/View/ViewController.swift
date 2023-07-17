@@ -23,6 +23,20 @@ class ViewController: UIViewController {
     
     
     // MARK: Properties
+    
+    private let imageView: UIImageView = {
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+        imageView.image = UIImage(named: "LaunchImage")
+        imageView.alpha = 0.8
+        return imageView
+    }()
+    
+    private let imageBackground: UIImageView = {
+        let imageBackground = UIImageView(frame: CGRect(x: 0, y: 0, width: 2000, height: 2000))
+        imageBackground.backgroundColor = Constants.primaryColor
+        return imageBackground
+    }()
+    
     private var isFinishedTypingNumber: Bool = true
     
     private var player: AVAudioPlayer!
@@ -47,7 +61,44 @@ class ViewController: UIViewController {
     // MARK: View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(imageBackground)
+        view.addSubview(imageView)
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
+            self.playSound(soundName: "+/-")
+        })
+
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        imageView.center = view.center
+        imageBackground.center = view.center
+        
+        DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
+            self.animate()
+        })
+    }
+    
+    private func animate() {
+        UIView.animate(withDuration: 1, animations: {
+            let size = self.view.frame.size.width * 20
+            let diffX = size - self.view.frame.size.width
+            let diffY = self.view.frame.size.height - size
+            
+            self.imageView.frame = CGRect(
+                x: -(diffX/2),
+                y: diffY/2,
+                width: size,
+                height: size
+                )
+        })
+        
+        UIView.animate(withDuration: 1, animations: {
+            self.imageView.alpha = 0
+            self.imageBackground.alpha = 0
+        })
+    }
+    
     
     
     // MARK: Button Actions
