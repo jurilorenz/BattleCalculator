@@ -43,8 +43,9 @@ class ViewController: UIViewController {
     
     private var displayValue: Double {
         get {
+            // Attempt to convert the text to a Double using optional binding
             guard let number = Double(displayLabel.text!) else {
-                fatalError("Cannot convert display label text to a Double.")
+                return 0.0 // Return a default value of 0.0
             }
             return number
         }
