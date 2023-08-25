@@ -1,9 +1,6 @@
 # BattleCalculator
 BattleCalculator project from Scratch. 
 
-Battle Calculator
-Declare War on Math!
-
 Are you tired of mundane, everyday calculators that lack excitement and engagement? Enter Battle Calculator, the app that brings a thrilling gaming experience to the world of mathematics. This unique calculator is designed to captivate those who love the excitement of computer games while making math fun and attractive!
 
 Key Features
